@@ -8,26 +8,26 @@
     <menu id="40">
       <phrase id="menutext" value="Master" />
     </menu>
-    <menu id="45">
-      <phrase id="menutext" value="Mitra" />
-    </menu>
     <menu id="44">
-      <phrase id="menutext" value="Kontak Mitra" />
+      <phrase id="menutext" value="kontak mitra" />
     </menu>
     <menu id="43">
-      <phrase id="menutext" value="Kerjasama" />
+      <phrase id="menutext" value="kerjasama" />
     </menu>
     <menu id="39">
       <phrase id="menutext" value="Data" />
     </menu>
+    <menu id="42">
+      <phrase id="menutext" value="interaksi" />
+    </menu>
     <menu id="41">
-      <phrase id="menutext" value="Event" />
+      <phrase id="menutext" value="event" />
+    </menu>
+    <menu id="45">
+      <phrase id="menutext" value="mitra" />
     </menu>
     <menu id="46">
-      <phrase id="menutext" value="Publikasi" />
-    </menu>
-    <menu id="42">
-      <phrase id="menutext" value="Interaksi" />
+      <phrase id="menutext" value="publikasi" />
     </menu>
     <menu id="16">
       <phrase id="menutext" value="User Profile" />

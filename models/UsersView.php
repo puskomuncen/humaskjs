@@ -767,7 +767,7 @@ class UsersView extends Users
         // Set up action default
         $option = $options["action"];
         $option->DropDownButtonPhrase = $this->language->phrase("ButtonActions");
-        $option->UseDropDownButton = !IsJsonResponse() && true;
+        $option->UseDropDownButton = !IsJsonResponse() && false;
         $option->UseButtonGroup = true;
         $item = &$option->addGroupOption();
         $item->Body = "";
