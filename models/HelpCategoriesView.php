@@ -751,7 +751,7 @@ class HelpCategoriesView extends HelpCategories
         $detailFilter = $detailTbl->applyUserIDFilters($detailFilter);
         $detailTbl->Count = $detailTbl->loadRecordCount($detailFilter);
         if (!$this->ShowMultipleDetails && Container("help")->Count > 0) { // Skip record count if show multiple details, added Container("help")->Count > 0 by Masino Sinaga, September 16, 2023) { // Skip record count if show multiple details
-            $body .= "&nbsp;" . sprintf($this->language->phrase("DetailCount"), "lightblue", Container("help")->Count);
+            $body .= "&nbsp;" . sprintf($this->language->phrase("DetailCount"), "orange", Container("help")->Count);
         }
         $body = "<a class=\"btn btn-default ew-row-link ew-detail\" data-action=\"list\" href=\"" . HtmlEncode(GetUrl("helplist?" . Config("TABLE_SHOW_MASTER") . "=help_categories&" . GetForeignKeyUrl("fk_Category_ID", $this->Category_ID->CurrentValue) . "")) . "\">" . $body . "</a>";
         $links = "";
@@ -833,7 +833,7 @@ class HelpCategoriesView extends HelpCategories
         // Set up action default
         $option = $options["action"];
         $option->DropDownButtonPhrase = $this->language->phrase("ButtonActions");
-        $option->UseDropDownButton = !IsJsonResponse() && false;
+        $option->UseDropDownButton = !IsJsonResponse() && true;
         $option->UseButtonGroup = true;
         $item = &$option->addGroupOption();
         $item->Body = "";

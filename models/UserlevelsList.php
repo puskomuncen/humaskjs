@@ -1378,7 +1378,7 @@ class UserlevelsList extends Userlevels
         $item->ShowInButtonGroup = false;
 
         // Drop down button for ListOptions
-        $this->ListOptions->UseDropDownButton = false;
+        $this->ListOptions->UseDropDownButton = true;
         $this->ListOptions->DropDownButtonPhrase = $this->language->phrase("ButtonListOptions");
         $this->ListOptions->UseButtonGroup = true;
         if ($this->ListOptions->UseButtonGroup && IsMobile()) {
@@ -1522,7 +1522,7 @@ class UserlevelsList extends Userlevels
                 $detailFilter = $detailTbl->applyUserIDFilters($detailFilter);
                 $detailTbl->Count = $detailTbl->loadRecordCount($detailFilter);
 				if (Container("users")->Count > 0) // Display if > 0 added by Masino Sinaga, September 16, 2023
-					$body .= "&nbsp;" . sprintf($this->language->phrase("DetailCount"), "lightblue", Container("users")->Count);
+					$body .= "&nbsp;" . sprintf($this->language->phrase("DetailCount"), "orange", Container("users")->Count);
             }
             $body = "<a class=\"btn btn-default ew-row-link ew-detail" . ($this->ListOptions->UseDropDownButton ? " dropdown-toggle" : "") . "\" data-action=\"list\" href=\"" . HtmlEncode("userslist?" . Config("TABLE_SHOW_MASTER") . "=userlevels&" . GetForeignKeyUrl("fk_ID", $this->ID->CurrentValue) . "") . "\">" . $body . "</a>";
             $links = "";
@@ -1628,7 +1628,7 @@ class UserlevelsList extends Userlevels
                 }
                 $detailFilters[$detailTbl->TableVar] = $detailFilter;
                 // Begin of modification by Masino Sinaga, December 11, 2024
-        		// $label .= "&nbsp;" . JsEncode(sprintf($this->language->phrase("DetailCount"), "lightblue", $detailTbl->Count));
+        		// $label .= "&nbsp;" . JsEncode(sprintf($this->language->phrase("DetailCount"), "orange", $detailTbl->Count));
         		// End of modification by Masino Sinaga, December 11, 2024
                 $url .= "&detailfilters=%f";
 
@@ -1809,7 +1809,7 @@ class UserlevelsList extends Userlevels
         // Set up options default
         foreach ($options as $name => $option) {
             if ($name != "column") { // Always use dropdown for column
-                $option->UseDropDownButton = false;
+                $option->UseDropDownButton = true;
                 $option->UseButtonGroup = true;
             }
             //$option->ButtonClass = ""; // Class for button group
