@@ -1,0 +1,11 @@
+{
+    "name": "humaskerjasama",
+    "version": "25.10.1",
+    "description": "humaskerjasama",
+    "license": "SEE LICENSE IN LICENSE.md",
+    "private": true,
+    "dependencies": {},
+    "engines": {
+        "node": ">=18"
+    }
+}
